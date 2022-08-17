@@ -1,0 +1,50 @@
+@import "generals";
+@import "mediacueries";
+
+.app {
+  min-height: 100vh;
+  line-height: 1.4;
+  background-color: #eee;
+
+  display: flex;
+  flex-direction: column;
+  header,
+  footer {
+    padding: 2rem;
+    height: 5rem;
+    background-color: steelblue;
+    color: #fff;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (min-width: 680px) {
+      flex-direction: column;
+    }
+
+    nav {
+      padding: 2rem;
+      background-color: deepskyblue;
+      flex: 0 1 20%;
+    }
+    aside {
+      padding: 2rem;
+      background-color: deepskyblue;
+      order: 1;
+      flex: 0 1 20%;
+      ul {
+        padding: 2em;
+        li {
+          white-space: nowrap;
+        }
+      }
+    }
+    section {
+      background-color: #ddd;
+      padding: 2rem;
+      overflow: auto;
+      flex: 1 0 60%;
+    }
+  }
+}
